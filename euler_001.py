@@ -26,5 +26,7 @@ for num in inputs:
     # remove overlaps
     a1 = 15
     num_terms = num // 15
+    if num % 15 == 0:
+        num_terms -= 1
     an = 15 * num_terms
     print sum(total) - (num_terms * (a1 + an) / 2)
