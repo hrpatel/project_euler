@@ -11,7 +11,7 @@ for i in range(num_entries):
 
 # iterate through each input
 for num in inputs:
-    # calculate arithematic sum for 3, 5
+    # calculate arithmetic sum for 3, 5
     total = []
     for digit in [3,5]:
         a1 = digit
