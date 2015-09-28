@@ -13,16 +13,20 @@ for i in range(num_entries):
 
 # find all prime numbers
 def get_prime(n):
-
     max_int = int(sqrt(n))
-
+    itr = 2
     primes = []
-    for i in xrange(2, max_int):
-        if n % i == 0:
-            primes.append(i)
+    while itr <= max_int:
+        if n == 1:
+            break
+        if n % itr == 0:
+            primes.append(itr)
+            n /= itr
+            itr = 2
+        else:
+            itr += 1
 
-    if not primes:
-        primes.append(n)
+    primes.append(n)
 
     return primes
 
